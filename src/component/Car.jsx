@@ -1,12 +1,14 @@
 import "../Style/Car.css";
 
-function Car({props}) {
+function Car(props) {
+    const { img, model, details, price } = props;
+
     return (
         <div className="car-info">
-            <h3>{props.model}</h3>
-            <img src={props.img} alt="Car Image" />
-            <p>{props.price}</p>
-            <h6>{props.details}</h6>
+            <h3>{model}</h3>
+            <img src={img} alt="Car Image" />
+            <p>{price}</p>
+            <h6>{details}</h6>
         </div>
     );
 }
